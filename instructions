@@ -1,0 +1,31 @@
+mkdir 
+gem install rails
+rails new hello
+rails generate controller hello
+in hello_controller-> 
+def hello
+  render html: "Hello World"
+end
+
+
+in routes.rb ->
+root 'application#hello'
+
+
+
+
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+heroku login
+
+edit gem file.... remove the sqlite3 gem and add pg gem
+
+
+heroku git:remote -a koushik-hello
+git init
+git add .
+git commit -am 'sethu'
+git push heroku master
+
+heroku run rake db:migrate
+
+
